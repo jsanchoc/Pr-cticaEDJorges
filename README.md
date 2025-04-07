@@ -24,3 +24,5 @@ INSERT INTO peliculas VALUES(9, 'Fantasía', 16, 'Jackson', 'LOTR');
 INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 
 ```
+## URL 
+> URL http://127.0.0.1:5000
