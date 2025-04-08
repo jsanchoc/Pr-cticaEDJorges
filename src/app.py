@@ -3,6 +3,7 @@ from flask import Flask, request
 from flask_cors import CORS
 from JGVutils import SQLiteConnection
 
+
 # CONFIGURACIÓN DEL PROYECTO
 application = Flask(__name__)
 cors = CORS(application)
@@ -31,13 +32,16 @@ def agregar_pelicula():
     # VALIDACIÓN
     if not (codigo or genero or edad or director or titulo):
         return "Error: Todos los campos son requeridos"
-
+    
     # INSERTAMOS EN LA BASE DE DATOS
     conexion = SQLiteConnection("Database1.db")
+
     conexion.execute_query(
         "INSERT INTO peliculas(codigo, genero, edad, director, titulo) VALUES (?, ?, ?, ?, ?)",
-        [codigo, genero, edad, director, titulo]
+        [codigo, genero, edad, director, titulo],
+        commit = True
     )
+    
 
     return "Película agregada correctamente."
 
