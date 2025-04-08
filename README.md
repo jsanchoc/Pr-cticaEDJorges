@@ -1,5 +1,16 @@
 # PracticaEDJorges
 
+INDICE
+1. [Comandos para crear la Base de Datos](#baseDatos)
+2. [URL](#url)
+3. [HTML (index.html)](#html)
+    - 3.1 [HTML (index.html)](#html)
+4. [Flask Python (código HTML)](#flask)
+    - 4.1 [Flask Python (código HTML)](#flask)
+    - 4.2 [Función agregar_pelicula](#funcionAgregar)
+5. [FUENTES](#fuentes)
+
+
 # Primeros pasos <!--JORGE CASAS GÓMEZ-->
 - ***Configuarar el entorno virutal -> python -m venv env***
 - ***Activar Entorno Virtual -> call env/scripts/activate***
@@ -8,7 +19,7 @@
 - ***Para el correcto funcionamiento de la API: cd src // flask --app app.py --debug run***
 
 
-## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ-->
+## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ--><div id="baseDatos">
 
 ```sql
 -- Estructura de tablas
@@ -39,10 +50,10 @@ INSERT INTO peliculas VALUES
 SELECT * FROM peliculas;
 ```
 
-## 2. URL 
+## 2. URL <div id="url"></div>
 > URL http://127.0.0.1:5000
 
-## 3. HTML (index.html) <!--JORGE CASAS GÓMEZ-->
+## 3. HTML (index.html)<div id="html"></div> <!--JORGE CASAS GÓMEZ-->
 
 ### 3.1 Datos a tener en cuenta <!--JORGE CASAS GÓMEZ-->
 - ***form action="..."***: Define a qué ruta de la API se enviarán los datos.
@@ -56,9 +67,9 @@ SELECT * FROM peliculas;
 - La carpeta **static** se ha creado para poder mostrar la imagen de fondo de la página del formulario, ya que, si no, me saltaba el ERROR: **404**..
 
 
-## 4. Flask Python (código HTML) <!--JORGE CASAS GÓMEZ-->
+## 4. Flask Python (código HTML)<div id="flask"></div> <!--JORGE CASAS GÓMEZ-->
 
-### 4.1 Función inicio <!--JORGE CASAS GÓMEZ-->
+### 4.1 Función inicio <div id="flask"></div><!--JORGE CASAS GÓMEZ-->
 
 - ***with open("HTML/index.html", encoding = "utf-8") as f:*** abre el archivo html que está en la carpeta **HTML**, llamado **index.html**.
 
@@ -71,7 +82,7 @@ SELECT * FROM peliculas;
 - ***return f.read***: lee todo el contenido del arxchivo f.read(), luego devuelve el html com respuesta al navegador y el Flask lo muestra como si fuera una página web.
 
 
-### 4.2 Función agregar_pelicula <!--JORGE CASAS GÓMEZ-->
+### 4.2 Función agregar_pelicula <div id="funcionAgregar"></div> <!--JORGE CASAS GÓMEZ-->
 
 - ***request.form.get("")***: recoge el valor de lo que se encuentra entre las comillas, en este caso, codigo, edad, genero... del formulario.
 
@@ -81,7 +92,7 @@ SELECT * FROM peliculas;
     application.run(debug=True)***: Inicia la app Flask, realizandose la carga automática y mensajes de error.
 
 
-## FUENTES <!--JORGE CASAS GÓMEZ-->
+## FUENTES <div id="fuentes"></div>  <!--JORGE CASAS GÓMEZ-->
 
 - https://realpython.com/ (***Documentación oficial Flask***)
 - https://flask.palletsprojects.com/en/latest/patterns/wtforms/ (***Flask y formularios***)
