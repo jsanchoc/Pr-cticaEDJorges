@@ -12,11 +12,11 @@ application.config["CORS_HEADERS"] = "Content-Type"
 @application.route("/", methods=["GET","POST"])
 def inicio():
     # Lectura del archivo html
-    try:
+try:
     with open("HTML/index.html", encoding = "utf-8") as f:
         return f.read()
-    except FileNotFoundError:
-        return "Archivo HTML no encontrado"
+except FileNotFoundError:
+    return "Archivo HTML no encontrado"
 
 # RUTA PARA AGREGAR LA PELÍCULA
 @application.route("/agregar",methods =["POST"])
