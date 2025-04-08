@@ -5,7 +5,7 @@
 - ***Activar Entorno Virtual -> call env/scripts/activate***
 - ***Crear requirements -> con los módulos a instalar***
 - ***Instalar módulos -> pip install -r requirements.txt***
-- ***Para el correcto funcionamiento de la API: cd src// flask --app app.py --debug run***
+- ***Para el correcto funcionamiento de la API: cd src // flask --app app.py --debug run***
 
 
 ## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ-->
@@ -52,6 +52,8 @@ SELECT * FROM peliculas;
 - Cada ***input*** tiene un **name** que corresponde con las claves que Flask recogerá para acceder al campo en cuestión.
 
 - Importamos el ***request*** para poder acceder a los datos del formulario.
+
+- La carpeta **static** se ha creado para poder mostrar la imagen de fondo de la página del formulario, ya que, si no, me saltaba el ERROR: **404**..
 
 
 ## 4. Flask Python (código HTML) <!--JORGE CASAS GÓMEZ-->
