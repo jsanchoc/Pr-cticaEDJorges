@@ -1,6 +1,6 @@
 # PracticaEDJorges
 
-INDICE
+# INDICE
 1. [Comandos para crear la Base de Datos](#baseDatos)
 2. [URL](#url)
 3. [HTML (index.html)](#html)
@@ -19,7 +19,7 @@ INDICE
 - ***Para el correcto funcionamiento de la API: cd src // flask --app app.py --debug run***
 
 
-## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ--><div id="baseDatos">
+## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ--><div id="baseDatos"></div>
 
 ```sql
 -- Estructura de tablas
