@@ -29,7 +29,7 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 ## 3. HTML (index.html)
 
 ### 3.1 Datos a tener en cuenta.
-- ***form action="..."*** : Define a qué ruta de la API se enviarán los datos.
+- ***form action="..."***: Define a qué ruta de la API se enviarán los datos.
 
 - ***method="post"***: Especifica que se usarán los datos del formulario con POST.
 
@@ -55,7 +55,7 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 
 ### 4.2 Función agregar_pelicula
 
-- ***request.form.get("")***: recoge el valor de lo que se encuentra entre las comillas, en este caso, codigo, edad,genero... del formulario.
+- ***request.form.get("")***: recoge el valor de lo que se encuentra entre las comillas, en este caso, codigo, edad, genero... del formulario.
 
 - ***SQLiteConnection*** y ***conexion.execute_query*** ejecuta la base de datos usando mi clase personalizada.
 

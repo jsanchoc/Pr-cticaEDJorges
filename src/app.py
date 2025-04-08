@@ -1,21 +1,21 @@
-# IMPORTACION DE LIBRERIAS
+# IMPORTACIÓN DE LIBRERÍAS
 from flask import Flask, request
 from flask_cors import CORS
 from JGVutils import SQLiteConnection
 
-# CONFIGURACION DEL PROYECTO
+# CONFIGURACIÓN DEL PROYECTO
 application = Flask(__name__)
 cors = CORS(application)
 application.config["CORS_HEADERS"] = "Content-Type"
 
-# PAGINAS PARA QUE ME APAREZCA UNA PAG INICIO
+# PÁGINAS PARA QUE ME APAREZCA UNA PAG INICIO
 @application.route("/", methods=["GET","POST"])
 def inicio():
     # Lectura del archivo html
     with open("HTML/index.html", encoding = "utf-8") as f:
         return f.read()
 
-# RUTA PARA AGREGAR LA PELICULA
+# RUTA PARA AGREGAR LA PELÍCULA
 @application.route("/agregar",methods =["POST"])
 def agregar_pelicula():
     # RECOGEMOS LOS DATOS DEL FORMULARIO ENVIADO
@@ -33,7 +33,7 @@ def agregar_pelicula():
     conexion.execute_query(
         f"INSERT INTO peliculas(codigo,genero,edad,director,titulo) VALUES(?,?,?,?,?)",
 
-        ## CADA ? hace referencia a cada uno de los parametros dentro de peliculas
+        ## CADA ? hace referencia a cada uno de los parámetros dentro de películas
         (codigo,genero,edad,director,titulo)
     )
 
