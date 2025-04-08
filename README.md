@@ -1,14 +1,13 @@
 # Pr-cticaEDJorges
 
-# Primero pasos //JORGE CASAS GÓMEZ
-
+# Primeros pasos <!--JORGE CASAS GÓMEZ-->
 - ***Configuarar el entorno virutal -> python -m venv env***
 - ***Activar Entorno Virtual -> call env/scripts/activate***
 - ***Crear requirements -> con los módulos a instalar***
 - ***Instalar módulos -> pip install -r requirements.txt***
 
 
-## 1. Comandos para crear la Base de Datos //JORGE CASAS GÓMEZ
+## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ-->
 
 ```
 CREATE TABLE peliculas(
@@ -34,9 +33,9 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 ## 2. URL 
 > URL http://127.0.0.1:5000
 
-## 3. HTML (index.html) //JORGE CASAS GÓMEZ
+## 3. HTML (index.html) <!--JORGE CASAS GÓMEZ-->
 
-### 3.1 Datos a tener en cuenta //JORGE CASAS GÓMEZ
+### 3.1 Datos a tener en cuenta <!--JORGE CASAS GÓMEZ-->
 - ***form action="..."***: Define a qué ruta de la API se enviarán los datos.
 
 - ***method="post"***: Especifica que se usarán los datos del formulario con POST.
@@ -46,9 +45,9 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 - Importamos el ***request*** para poder acceder a los datos del formulario.
 
 
-## 4. Flask Python (código HTML) //JORGE CASAS GÓMEZ
+## 4. Flask Python (código HTML) <!--JORGE CASAS GÓMEZ-->
 
-### 4.1 Función inicio //JORGE CASAS GÓMEZ
+### 4.1 Función inicio <!--JORGE CASAS GÓMEZ-->
 
 - ***with open("HTML/index.html", encoding = "utf-8") as f:*** abre el archivo html que está en la carpeta **HTML**, llamado **index.html**.
 
@@ -61,7 +60,7 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 - ***return f.read***: lee todo el contenido del arxchivo f.read(), luego devuelve el html com respuesta al navegador y el Flask lo muestra como si fuera una página web.
 
 
-### 4.2 Función agregar_pelicula //JORGE CASAS GÓMEZ
+### 4.2 Función agregar_pelicula <!--JORGE CASAS GÓMEZ-->
 
 - ***request.form.get("")***: recoge el valor de lo que se encuentra entre las comillas, en este caso, codigo, edad, genero... del formulario.
 
@@ -71,7 +70,7 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
     application.run(debug=True)***: Inicia la app Flask, realizandose la carga automática y mensajes de error.
 
 
-## FUENTES //JORGE CASAS GÓMEZ
+## FUENTES <!--JORGE CASAS GÓMEZ-->
 
 - https://realpython.com/ (***Documentación oficial Flask***)
 - https://flask.palletsprojects.com/en/latest/patterns/wtforms/ (***Flask y formularios***)
