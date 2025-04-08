@@ -10,13 +10,13 @@
 
 ## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ-->
 
-```
+```sql
 CREATE TABLE peliculas(
-codigo INTEGER PRIMARY KEY,
-genero VARCHAR(20),
-edad INTEGER,
-director VARCHAR(20),
-titulo VARCHAR(20)
+    codigo INTEGER PRIMARY KEY,
+    genero VARCHAR(20),
+    edad INTEGER,
+    director VARCHAR(20),
+    titulo VARCHAR(20)
 );
 
 
