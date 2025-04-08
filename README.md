@@ -4,7 +4,7 @@
 1. [Comandos para crear la Base de Datos](#baseDatos)
 2. [URL](#url)
 3. [HTML (index.html)](#html)
-    - 3.1 [HTML (index.html)](#html)
+    - 3.1 [Datos a tener en cuenta](#html)
 4. [Flask Python (código HTML)](#flask)
     - 4.1 [Flask Python (código HTML)](#flask)
     - 4.2 [Función agregar_pelicula](#funcionAgregar)
