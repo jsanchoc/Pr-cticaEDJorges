@@ -23,7 +23,7 @@ INSERT INTO peliculas VALUES(8, 'Aventura', 16, 'Scott', 'Gladiator');
 INSERT INTO peliculas VALUES(9, 'Fantasía', 16, 'Jackson', 'LOTR');
 INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 ```
-## URL 
+## 2. URL 
 > URL http://127.0.0.1:5000
 
 ## 3. HTML (index.html)
@@ -61,4 +61,14 @@ INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
 
 - ***if __name__ == "__main__"
     application.run(debug=True)***: Inicia la app Flask, realizandose la carga automática y mensajes de error.
+
+
+## FUENTES
+
+- https://realpython.com/ (***Documentación oficial Flask***)
+- https://flask.palletsprojects.com/en/latest/patterns/wtforms/ (***Flask y formularios***)
+- https://flask.palletsprojects.com/en/latest/api/#flask.Request.form (***Para request.form.get()***)
+- https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files (***Manejo de archivos en Python with open***)
+
+
 
