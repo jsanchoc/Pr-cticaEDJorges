@@ -1,10 +1,11 @@
-# Pr-cticaEDJorges
+# PracticaEDJorges
 
 # Primeros pasos <!--JORGE CASAS GÓMEZ-->
 - ***Configuarar el entorno virutal -> python -m venv env***
 - ***Activar Entorno Virtual -> call env/scripts/activate***
 - ***Crear requirements -> con los módulos a instalar***
 - ***Instalar módulos -> pip install -r requirements.txt***
+- ***Para el correcto funcionamiento de la API: cd src// flask --app app.py --debug run***
 
 
 ## 1. Comandos para crear la Base de Datos <!--JORGE CASAS GÓMEZ-->
