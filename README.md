@@ -1,5 +1,13 @@
 # Pr-cticaEDJorges
 
+# Primero pasos
+
+- ***Configuarar el entorno virutal -> python -m venv env ***
+- ***Activar Entorno Virtual -> call env/scripts/activate ***
+- *** Crear requirements -> con los módulos a instalar ***
+- *** Instalar módulos -> pip install -r requirements.txt***
+
+
 ## 1. Comandos para crear la Base de Datos
 
 ```

@@ -25,7 +25,7 @@ def agregar_pelicula():
     director = request.form.get("director")
     titulo = request.form.get("titulo")
 
-    if not(codigo AND genero AND edad AND director AND titulo):
+    if not(codigo or genero or edad or director or titulo):
         return "Error: Todos los campos son requeridos"
 
     # INSERTAMOS LA BASE DE DATOS
