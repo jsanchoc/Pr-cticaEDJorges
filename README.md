@@ -22,7 +22,43 @@ INSERT INTO peliculas VALUES(7, 'Romance', 13, 'Allen', 'Hitch');
 INSERT INTO peliculas VALUES(8, 'Aventura', 16, 'Scott', 'Gladiator');
 INSERT INTO peliculas VALUES(9, 'Fantasía', 16, 'Jackson', 'LOTR');
 INSERT INTO peliculas VALUES(10, 'Animación', 10, 'Spielberg', 'Shrek');
-
 ```
 ## URL 
 > URL http://127.0.0.1:5000
+
+## 3. HTML (index.html)
+
+### 3.1 Datos a tener en cuenta.
+- ***form action="..."*** : Define a qué ruta de la API se enviarán los datos.
+
+- ***method="post"***: Especifica que se usarán los datos del formulario con POST.
+
+- Cada ***input*** tiene un **name** que corresponde con las claves que Flask recogerá para acceder al campo en cuestión.
+
+- Importamos el ***request*** para poder acceder a los datos del formulario.
+
+
+## 4. Flask Python (código HTML)
+
+### 4.1 Función inicio
+
+- ***with open("HTML/index.html", encoding = "utf-8") as f:*** abre el archivo html que está en la carpeta **HTML**, llamado **index.html**.
+
+- ***with***: abre archivos de forma segura y controlada(cierre automático).
+
+- ***encoding = "utf-8"***: permite leer los caracteres especiales **(áéíóú o ñ)**.
+
+- ***as f***: guarda el archivo en la variable **f**.
+
+- ***return f.read***: lee todo el contenido del arxchivo f.read(), luego devuelve el html com respuesta al navegador y el Flask lo muestra como si fuera una página web.
+
+
+### 4.2 Función agregar_pelicula
+
+- ***request.form.get("")***: recoge el valor de lo que se encuentra entre las comillas, en este caso, codigo, edad,genero... del formulario.
+
+- ***SQLiteConnection*** y ***conexion.execute_query*** ejecuta la base de datos usando mi clase personalizada.
+
+- ***if __name__ == "__main__"
+    application.run(debug=True)***: Inicia la app Flask, realizandose la carga automática y mensajes de error.
+
