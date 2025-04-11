@@ -51,4 +51,7 @@ if __name__ == "__main__":
 # RUTA PARA MOSTRAR TODO
 @application.route("/mostrar", methods=["GET"])
 def mostrar_todo():
-    
+    conexion = SQLiteConnection("Database1.db")
+    peliculas = conexion.execute_query("SELECT * FROM peliculas")
+
+    return peliculas
