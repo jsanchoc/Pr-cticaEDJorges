@@ -12,8 +12,8 @@
 
 
 # Primeros pasos <!--JORGE CASAS GÓMEZ-->
-- ***Configuarar el entorno virutal -> python -m venv env***
-- ***Activar Entorno Virtual -> call env/scripts/activate***
+- ***Configuarar el entorno virutal Windows-> python -m venv env | macOS-> python3 -m venv env***
+- ***Activar Entorno Virtual Windows-> call env/scripts/activate | macOS-> source env/bin/activate***
 - ***Crear requirements -> con los módulos a instalar***
 - ***Instalar módulos -> pip install -r requirements.txt***
 - ***Para el correcto funcionamiento de la API: cd src // flask --app app.py --debug run***
