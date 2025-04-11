@@ -1,5 +1,5 @@
 # IMPORTACIÓN DE LIBRERÍAS
-from flask import Flask, request
+from flask import Flask, request, render_template
 from flask_cors import CORS
 from JGVutils import SQLiteConnection
 
@@ -50,8 +50,7 @@ if __name__ == "__main__":
 
 # RUTA PARA MOSTRAR TODO
 @application.route("/mostrar", methods=["GET"])
-def mostrar_todo():
+def mostrar_peliculas():
     conexion = SQLiteConnection("Database1.db")
-    peliculas = conexion.execute_query("SELECT * FROM peliculas")
-
-    return peliculas
+    peliculas = conexion.execute_query("SELECT * FROM peliculas", fetch=True)
+    return render_template("mostrar.html", peliculas=peliculas)
