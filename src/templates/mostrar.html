@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Lista de Películas</title>
     <style>
-        body { background-color: black; color: white; font-family: sans-serif; padding: 20px; }
+        body { background-color: white; color: black; font-family: sans-serif; padding: 20px; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { padding: 10px; border: 1px solid gray; text-align: left; }
         th { background-color: darkslategray; }
@@ -22,11 +22,11 @@
         </tr>
         {% for peli in peliculas %}
         <tr>
-            <td>{{ peli[0] }}</td>
-            <td>{{ peli[1] }}</td>
-            <td>{{ peli[2] }}</td>
-            <td>{{ peli[3] }}</td>
-            <td>{{ peli[4] }}</td>
+            <td>{{ peli['codigo'] }}</td>
+            <td>{{ peli['genero'] }}</td>
+            <td>{{ peli['edad'] }}</td>
+            <td>{{ peli['director'] }}</td>
+            <td>{{ peli['titulo'] }}</td>
         </tr>
         {% endfor %}
     </table>

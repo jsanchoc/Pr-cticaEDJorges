@@ -41,16 +41,16 @@ def agregar_pelicula():
         [codigo, genero, edad, director, titulo],
         commit = True
     )
-    
 
     return "Película agregada correctamente."
-
-if __name__ == "__main__":
-    application.run(debug=True)
 
 # RUTA PARA MOSTRAR TODO
 @application.route("/mostrar", methods=["GET"])
 def mostrar_peliculas():
     conexion = SQLiteConnection("Database1.db")
-    peliculas = conexion.execute_query("SELECT * FROM peliculas", fetch=True)
+    peliculas = conexion.execute_query("SELECT * FROM peliculas")
     return render_template("mostrar.html", peliculas=peliculas)
+
+
+if __name__ == "__main__":
+    application.run(debug=True)
