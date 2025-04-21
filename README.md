@@ -117,7 +117,7 @@ Esto mostrará solo las películas del género "Acción" recomendadas para mayor
 
 ---
 
-### 4.3 Función eliminar_pelicula <div id="funcionEliminar"></div> <!--Jorge Sancho-->
+### 4.4 Función eliminar_pelicula <div id="funcionEliminar"></div> <!--Jorge Sancho-->
 
 Esta ruta borra una película concreta. Solo con poner su código en la URL. Ejemplo:
 
