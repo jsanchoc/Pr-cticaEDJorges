@@ -99,7 +99,7 @@ Esta ruta permite mostrar todas las películas registradas en la base de datos. 
 - `director`
 - `titulo`
 
-**Ejemplo de uso:**
+**Ejemplo de uso:** <!--Jorge Sancho-->
 
 > /mostrar?genero=Acción&edad=18
 
@@ -107,7 +107,7 @@ Esto mostrará solo las películas del género "Acción" recomendadas para mayor
 
 ---
 
-**¿Qué hace esta ruta por dentro?**
+**¿Qué hace esta ruta por dentro?** <!--Jorge Sancho-->
 
 
 1. Usa líneas como `request.args.get("codigo")` para recoger los filtros desde la URL. Si por ejemplo accedes a `/mostrar?codigo=5`, con esa línea se obtiene el valor `5`.
@@ -127,7 +127,7 @@ Esto eliminará la película con código `12`.
 
 ---
 
-**¿Qué hace esta ruta por dentro?**
+**¿Qué hace esta ruta por dentro?** <!--Jorge Sancho-->
 
 1. El valor `<codigo>` se recoge directamente de la URL como variable.
 2. Se ejecuta la consulta `DELETE` usando el código para borrar la película.
@@ -145,9 +145,9 @@ Esto eliminará la película con código `12`.
 - https://flask.palletsprojects.com/en/latest/patterns/wtforms/ (***Flask y formularios***)
 - https://flask.palletsprojects.com/en/latest/api/#flask.Request.form (***Para request.form.get()***)
 - https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files (***Manejo de archivos en Python with open***)
-- https://stackoverflow.com/
-- https://realpython.com/
-- https://flask.palletsprojects.com/
+- https://stackoverflow.com/ <!--Jorge Sancho-->
+- https://realpython.com/ <!--Jorge Sancho-->
+- https://flask.palletsprojects.com/ <!--Jorge Sancho-->
 
 
 

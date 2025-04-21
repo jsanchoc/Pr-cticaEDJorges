@@ -1,8 +1,7 @@
-# IMPORTACIÓN DE LIBRERÍAS
+# IMPORTACIÓN DE LIBRERÍAS <!--Jorge Casas-->
 from flask import Flask, request, render_template, redirect, url_for
 from flask_cors import CORS
 from JGVutils import SQLiteConnection
-
 
 # CONFIGURACIÓN DEL PROYECTO
 application = Flask(__name__)
@@ -44,7 +43,7 @@ def agregar_pelicula():
 
     return "Película agregada correctamente."
 
-# RUTA PARA MOSTRAR TODO 
+# RUTA PARA MOSTRAR TODO <!--Jorge Sancho-->
 @application.route("/mostrar", methods=["GET"])
 def mostrar_peliculas():
     # Recogemos los posibles argumentos
