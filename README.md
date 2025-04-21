@@ -8,6 +8,8 @@
 4. [Flask Python (código HTML)](#flask)
     - 4.1 [Flask Python (código HTML)](#flask)
     - 4.2 [Función agregar_pelicula](#funcionAgregar)
+    - 4.3 [Función mostrar_peliculas](#funcionMostrar)
+    - 4.4 [Función eliminar_pelicula](#funcionEliminar)
 5. [FUENTES](#fuentes)
 
 
@@ -88,8 +90,53 @@ SELECT * FROM peliculas;
 
 - ***SQLiteConnection*** y ***conexion.execute_query*** ejecuta la base de datos usando mi clase personalizada.
 
-- ***if __name__ == "__main__"
-    application.run(debug=True)***: Inicia la app Flask, realizandose la carga automática y mensajes de error.
+### 4.3 Función mostrar_peliculas <div id="funcionMostrar"></div> <!--Jorge Sancho-->
+
+Esta ruta permite mostrar todas las películas registradas en la base de datos. Además, se pueden aplicar filtros opcionales mediante parámetros en la URL, como por ejemplo:
+- `codigo`
+- `genero`
+- `edad`
+- `director`
+- `titulo`
+
+**Ejemplo de uso:**
+
+> /mostrar?genero=Acción&edad=18
+
+Esto mostrará solo las películas del género "Acción" recomendadas para mayores de 18 años.
+
+---
+
+**¿Qué hace esta ruta por dentro?**
+
+
+1. Usa líneas como `request.args.get("codigo")` para recoger los filtros desde la URL. Si por ejemplo accedes a `/mostrar?codigo=5`, con esa línea se obtiene el valor `5`.
+2. Va añadiendo condiciones a la consulta SQL dependiendo de los filtros que vayas poniendo. Por ejemplo, si pones solo la edad, buscará solo por la edad.
+3. Usa la clase `SQLiteConnection` para conectarse a la base de datos y poder ejecutar la consulta.
+4. Muestra los resultados en la plantilla `mostrar.html`.
+
+---
+
+### 4.3 Función eliminar_pelicula <div id="funcionEliminar"></div> <!--Jorge Sancho-->
+
+Esta ruta borra una película concreta. Solo con poner su código en la URL. Ejemplo:
+
+> /eliminar/12
+
+Esto eliminará la película con código `12`.
+
+---
+
+**¿Qué hace esta ruta por dentro?**
+
+1. El valor `<codigo>` se recoge directamente de la URL como variable.
+2. Se ejecuta la consulta `DELETE` usando el código para borrar la película.
+3. Se guardan los cambios en la base de datos con `commit=True`.
+4. Te redirige automáticamente a la ruta `/mostrar` para ver el listado actualizado.
+
+---
+
+`if __name__ == "__main__" application.run(debug=True)`: Inicia la app Flask, realizandose la carga automática y mensajes de error.
 
 
 ## FUENTES <div id="fuentes"></div>  <!--JORGE CASAS GÓMEZ-->
@@ -98,6 +145,10 @@ SELECT * FROM peliculas;
 - https://flask.palletsprojects.com/en/latest/patterns/wtforms/ (***Flask y formularios***)
 - https://flask.palletsprojects.com/en/latest/api/#flask.Request.form (***Para request.form.get()***)
 - https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files (***Manejo de archivos en Python with open***)
+- https://stackoverflow.com/
+- https://realpython.com/
+- https://flask.palletsprojects.com/
+
 
 
 
